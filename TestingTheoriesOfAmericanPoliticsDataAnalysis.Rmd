@@ -1,12 +1,14 @@
 ---
 title: "TestingTheoriesOfAmericanPoliticsDataAnalysis"
 Authors: "Alejandro Lopez"
-output: html_document
+output: pdf_document
 ---
 
 ```{r, include=FALSE}
 
-install.packages("haven")
+# un-comment next line on first access to install haven package which allows access to .dta files
+
+# install.packages("haven")
 
 library(haven)
 library(tidyverse)
@@ -19,5 +21,14 @@ mainData <- read_dta("urn_cambridge.org_id_binary_20160927084422848-0419_S153759
 # head(mainData)
 
 # View(mainData)
-     
+    
+additionalDataset1 <- read_sav("DS2_v2.sav")
+
+# additionalDataset1
+
+View(additionalDataset1)
+
+additionalDataset2 <- read_sav("DS3_v2.sav")
+
+# View(additionalDataset2)
 ```
