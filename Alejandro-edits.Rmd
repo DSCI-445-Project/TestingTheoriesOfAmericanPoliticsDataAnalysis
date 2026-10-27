@@ -1,0 +1,34 @@
+---
+title: "Alejandro-edits"
+output: pdf_document
+---
+
+```{r, include=FALSE}
+
+# un-comment next line on first access to install haven package which allows access to .dta files
+
+# install.packages("haven")
+
+library(haven)
+library(tidyverse)
+library(tidymodels)
+library(discrim)
+
+
+mainData <- read_dta("urn_cambridge.org_id_binary_20160927084422848-0419_S1537592714001595_S1537592714001595sup006.dta")
+
+# head(mainData)
+
+# View(mainData)
+    
+additionalDataset1 <- read_sav("DS2_v2.sav")
+
+# additionalDataset1
+
+# View(additionalDataset1)
+
+additionalDataset2 <- read_sav("DS3_v2.sav")
+
+# View(additionalDataset2)
+
+```
